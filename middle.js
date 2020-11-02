@@ -15,5 +15,6 @@ const middle = function(arr) {
     }
   }
 };
-// console.log(middle([1,2,3,4,5]))
-// console.log(assertArraysEqual(middle([1,2,3,4,5]), [3]))
+
+module.exports = middle;
+
