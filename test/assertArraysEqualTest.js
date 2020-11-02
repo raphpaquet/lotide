@@ -1,6 +1,10 @@
-const assertArraysEqual = require('../assertArraysEqual')
-const eqArrays = require('../eqArrays')
+const assert = require('chai').assert;
+const assertArraysEqual = require('../assertArraysEqual');
 
-console.log(assertArraysEqual([1, 2, 3], [1, 2, 3])); // true
-console.log(assertArraysEqual(["2", 2, 5], [2, 2, 5])); //false
-console.log(assertArraysEqual(["1", "2", "3"], ["1", "2", 3])) //false 
+
+describe('#assertArraysEqual', () => {
+  it('returns 💚💚Passed if [1, 2, 3] === [1, 2, 3]', () => {
+    assert.strictEqual(assertArraysEqual([1, 2, 3], [1, 2, 3]));
+  });
+});
+
