@@ -8,8 +8,10 @@ const assertArraysEqual = require('./assertArraysEqual');
         newArr.splice(newArr.indexOf(item), 1)
        }
    } return newArr;
- }
- 
+ };
 
-console.log(without([2, 3, 1], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+
+module.exports = without;
+
+// console.log(without([2, 3, 1], [1])) // => [2, 3]
+// console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
