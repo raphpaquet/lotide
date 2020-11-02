@@ -1,6 +1,10 @@
+const assert = require('chai').assert;
 const assertEqual = require('../assertEqual');
 
-console.log(assertEqual('Lighthouse Labs', 'Bootcamp'))
-console.log(assertEqual(1, 1));
-console.log(assertEqual(1, 4));
-console.log(assertEqual('Boot', 'Boot'));
+describe('#assertEqual', () => {
+  it('returns 💚💚 Assertion Passed if "Boot" === "Boot"', () => {
+    assert.strictEqual(assertEqual('Boot', 'Boot'))
+  })
+})
+
+
