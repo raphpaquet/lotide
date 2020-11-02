@@ -1,13 +1,9 @@
-const eqArrays = require('../eqArrays')
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
+const eqArrays = require('../eqArrays');
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3])) // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 4])) // => false
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
-console.log(eqArrays(["1", "2", "3"], ["1", 2, "3"])) // => false*/
-console.log(eqArrays([2, 2, 5], [2, 2, '5'])); // => false
-
-
-console.log(assertEqual(eqArrays([1,2,3], [1,2,3]), true)); //Assertion Passed : true === true
-console.log(assertEqual(eqArrays([1, 2, 3], [3, 2, 4]), true)); // Assertion failed false !== true*/
+describe('#eqArrays', () => {
+  it('should returns true if [1, 2, 3] === [1, 2, 3]', () => {
+    assert.strictEqual(eqArrays([1, 2, 3], [1, 2, 3]));
+  });
+});
 
