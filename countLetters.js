@@ -1,23 +1,31 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`💚💚 Assertion Passed : ${actual} === ${expected}`)
-  } else {
-    console.log(`❌❌ Assertion failed : ${actual} !== ${expected}`)
-  }
-};
+const assertEqual = require('./assertEqual')
+
 
 const countLetters = function(string) {
-// Iterate over string (for...of)
-// return object {letter : count}
-let resultObj = {};
-let newString = string.replace(/ /g, "")
-  for (let letter of newString) {
-    if (resultObj[letter]) {
-      resultObj[letter]++;
-    } else {
-      resultObj[letter] = 1
+const result = {};
+  for (let i of string) {
+    if(result[i]) {
+      result[i] += 1; 
+    } else if (i !== ' ') {
+      result[i] = 1
     }
-  } return resultObj; 
+  } return result; 
 };
 
-console.log(countLetters("lighthouse in the house"))
+const expected =  {
+  l: 1,
+  i: 2,
+  g: 1,
+  h: 4,
+  t: 2,
+  o: 2,
+  u: 2,
+  s: 2,
+  e: 3,
+  n: 1,
+}
+
+
+module.exports = countLetters;
+// let objectLetters = countLetters('lighthouse in the house')
+// console.log(assertEqual(objectLetters['t'], expected['t']))
